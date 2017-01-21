@@ -9,7 +9,7 @@
 
 puts "这个种子档会自动建立一个admin账号，并且创建10个public jobs,以及10个hidden jobs"
 
-create_account = User.create([email: 'example@gmail.com', password: '123456', password_confirmation: '123456',
+create_account = User.create([email: 'admin@gmail.com', password: '123456', password_confirmation: '123456',
   is_admin: 'true'])
 puts "Admin account created."
 
