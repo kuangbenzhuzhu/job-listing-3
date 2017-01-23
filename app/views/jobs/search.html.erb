@@ -1,0 +1,9 @@
+<div class="container-fluid search-page" style="padding-left: 0; padding-right: 0; margin-top: 0; height: 90%;">
+	<%= render "jobs/search_bar" %>
+	<% if @jobs.count > 0 %>
+
+		<%= render "jobs/search_bar" %>
+	<% else %>
+		<h3 class="text-center" style="margin-top: 10%; color: white;">抱歉，没有搜索到与关键词<b>"<%= @query_string %>"</b>有关的职位</h3>
+	<% end %>
+</div>

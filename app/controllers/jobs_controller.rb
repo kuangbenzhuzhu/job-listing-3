@@ -1,6 +1,11 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :validates_search_key, only: [:search]
 
+
+  def search
+    @jobs = Job.ransack({:title_or_field_or_location_or_company_name_cont => @q }).result(distinct: true)    
+  end
 
   def show
     @job = Job.find(params[:id])
@@ -55,6 +60,12 @@ class JobsController < ApplicationController
     @job.destroy
     redirect_to jobs_path
   end
+
+  protected
+  def validates_search_key
+    @q = params[:query_string].gsub(/\\|\'|\/\?/,"") if params[:query_string].present?
+  end
+
 
   private
 
