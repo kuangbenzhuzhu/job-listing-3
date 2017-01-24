@@ -22,6 +22,14 @@ end
 puts "10 Public jobs created."
 
 create_jobs = for i in 1..10 do
+  Job.create!([title: "程序员.#{i}", description: "这是种子建立的第#{i+10}个Public工作", wage_upper_bound: rand(50..99)*100,
+                wage_lower_bound: rand(10..49)*100, is_hidden: "false" ])
+  #sleep rand(1..5)
+end
+
+puts "10 Public jobs2 created."
+
+create_jobs = for i in 1..10 do
   Job.create!([title: "Job.no.#{i+10}", description: "这是种子建立的第#{i+10}个hidden工作",
                wage_upper_bound: rand(50..99)*100, wage_lower_bound: rand(10..49)*100, is_hidden: "true" ])
   #sleep rand(2..4)

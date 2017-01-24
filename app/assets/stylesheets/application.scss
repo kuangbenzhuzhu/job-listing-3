@@ -51,8 +51,9 @@
    border-top-right-radius: 3px;//右上角圆边
    border-top-left-radius: 3px;//左上角圆边
 
-
  }
+
+
 
  //.slogan {
    //background-color: rgba(0, 0, 0, 0.39);//背景颜色含透明度
@@ -106,17 +107,23 @@
     margin-top: 60px;
 }
 
+
+
 .navbar-default {
     background-color: #ffffff;//导航栏背景颜色
     border-color: #ffffff;//导航栏边框色
     margin-bottom: 0;//底部 margin 不撑开距离
+
 }
+
 
 @media (min-width: 768px) {
     .navbar {
         border-radius: 0;//圆角为0 （去掉导航栏圆角）
+        min-height:30px;
     }
 }
+
 
 .navbar-default .navbar-brand {
    color: #d9534f;//navbar标题的字体颜色
@@ -129,6 +136,13 @@
   color: #FF6F00;//鼠标放置在导航栏链接上的文字颜色
   background-color: transparent;//鼠标放置在导航栏链接上的背景颜色，这里设为透明
 }
+
+//.navbar-default .navbar-search{
+//  padding: 10px 0px 0px;
+//  margin: 0px;
+//}
+
+
 
 .navbar-default .navbar-nav > li > a{
   color: #d9534f;//“注册”、“登入”链接的字体颜色

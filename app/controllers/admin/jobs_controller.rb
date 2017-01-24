@@ -5,6 +5,7 @@ class Admin::JobsController < ApplicationController
 
   def index
     @jobs = Job.all
+    @jobs = @jobs.recent.paginate(:page => params[:page], :per_page => 10 )
   end
 
   def show

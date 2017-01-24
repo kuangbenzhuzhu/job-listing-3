@@ -1,14 +1,19 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default " role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="/">24k offer</a>
     </div>
 
+    <div class="navbar-search">
+        <%= render :partial => "jobs/search_bar"%>
+    </div>
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapses-1">
-      <ul class="nav navbar-nav navbar-right">
 
+
+      <ul class="nav navbar-nav navbar-right ">
         <% if !current_user %>
           <li><%= link_to("注册", new_user_registration_path)%></li>
           <li><%= link_to("登入", new_user_session_path)%></li>
