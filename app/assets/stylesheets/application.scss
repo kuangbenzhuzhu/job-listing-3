@@ -19,6 +19,55 @@
  @import "bootstrap";
  @import "font-awesome";
 
+ //.parallax {
+//    position: fixed;
+//    z-index: -1;
+//    width: 100%;
+  //  height: 100%;
+//}
+
+
+.parallax {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.parallaxImg:before {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    content: "";
+    background-position-x: center;
+}
+
+.parallaxImg-header:before {
+    background-image: url('https://ww4.sinaimg.cn/large/006tNc79gy1fbzqgamkkaj31kw11ze83.jpg');
+}
+
+.front-clouds {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: 1;
+    width: 325pc;
+    height: 70%;
+    background: rgba(0, 0, 0, 0.39) repeat-x;
+    opacity: .2;
+    -webkit-background-size: 2600px 855pt;
+}
+
+.crp-showcase {
+    overflow: hidden;
+    margin-top: 30px;
+
+    background-size: cover;
+
+}
+
  .custab{
    border: 1px solid #ccc;
    padding: 5px;
