@@ -5,6 +5,21 @@
       <a class="navbar-brand" href="/">Job Listing</a>
     </div>
 
+    <div class="navbar navbar-left">
+      <%= form_tag search_jobs_path , :method => :get, :class => "jobs-search-form" do %>
+      <div class="input-group">
+        <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="搜索工作关键字...">
+
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    <% end %>
+
+    </div>
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapses-1">
       <ul class="nav navbar-nav navbar-right">
