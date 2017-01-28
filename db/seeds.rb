@@ -13,8 +13,12 @@ create_account = User.create([email: 'admin@gmail.com', password: '123456', pass
 puts "Admin account created."
 
 create_jobs = for i in 1..10 do
-  Job.create!([title: "工程师.#{i}", description: "这是种子建立的第#{i}个Public工作", wage_upper_bound: rand(50..99)*100,
-                wage_lower_bound: rand(10..49)*100, is_hidden: "false" ])
+  Job.create!([title: "工程师.#{i}", description: "这是种子建立的第#{i}个Public工作",
+                wage_upper_bound: rand(50..99)*100,
+                wage_lower_bound: rand(10..49)*100,
+                company_name: "火烈鸟",
+                company_location: "广州",
+                is_hidden: "false" ])
   #sleep rand(1..5)
 end
 
@@ -22,7 +26,11 @@ puts "10 Public jobs created."
 
 create_jobs = for i in 1..10 do
   Job.create!([title: "程序员.#{i+10}", description: "这是种子建立的第#{i+10}个hidden工作",
-               wage_upper_bound: rand(50..99)*100, wage_lower_bound: rand(10..49)*100, is_hidden: "true" ])
+               wage_upper_bound: rand(50..99)*100,
+               wage_lower_bound: rand(10..49)*100,
+               company_name: "爱游戏",
+               company_location: "广州",
+               is_hidden: "true" ])
   #sleep rand(2..4)
 end
 

@@ -20,11 +20,12 @@
 <table class="table table-boldered">
   <thead>
         <tr>
-            <td>
-                职缺</td>
-            <td>薪资下限</td>
-            <td>薪资上限</td>
-            <td>刊登时间</td>
+            <th>职位名称</th>
+            <th>工资范围</th>
+            <th>公司名称</th>
+            <th>公司地点</th>
+            <th>发布时间</th>
+
         </tr>
 
     </thead>
@@ -35,14 +36,18 @@
                     <%= link_to(job.title, job_path(job)) %>
                 </td>
                 <td>
-                    <%= job.wage_lower_bound %>
+                    <i class="fa fa-jpy" aria-hidden="true"></i><%= job.wage_lower_bound %>-<%= job.wage_upper_bound %>元
                 </td>
                 <td>
-                    <%= job.wage_upper_bound %>
+                    <%= job.company_name %>
+                </td>
+                <td>
+                    <%= job.company_location %>
                 </td>
                 <td>
                     <%= job.created_at %>
                 </td>
+
             </tr>
             <% end %>
         </tbody>
