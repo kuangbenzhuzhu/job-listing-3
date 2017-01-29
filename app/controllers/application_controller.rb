@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  def index
-    flash[:notice] = "Hello~"
-  end
+#  def index
+#    flash[:notice] = "Hello~"
+#  end
 
   def require_is_admin
     if !current_user.admin?

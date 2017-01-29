@@ -1,1 +1,121 @@
-<h1>Hello World!</h1>
+
+<!-- 首页第一部分 -->
+<div class="jumbotron text-center">
+  <h1>Find the job that fits your life</h1>
+  <br>
+   <!-- 首页搜索框 -->
+  <div class="form-inline">
+    <%= form_tag search_jobs_path , :method => :get, :class => "jobs-search-form" do %>
+      <div class="input-group">
+        <input type="text" class="form-control" size="50"name="q" value="<%= params[:q] %>"
+              placeholder="Job title or Keyword...">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search"></span> Search
+          </button>
+        </span>
+        <span class="input-group-btn">
+        <button  class="btn btn-default">
+        <a href="/jobs" class="browse"><i class="fa fa-list-ul" aria-hidden="true"></i>  Browse</a>
+        </button>
+        </span>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="container-fluid welcome-index">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About PerfectOffer</h2>
+      <p>PerfectOffer is your free inside look at jobs and companies.
+        Salary details, company reviews, and interview questions
+        — all posted anonymously by employees and job seekers.</p>
+        <br>
+      <button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo" ></span>
+    </div>
+  </div>
+</div>
+
+<!-- Container (About Services)-->
+<div class="container-fluid welcome-index bg-grey text-center">
+  <h2 class="h2">SERVICES</h2>
+  <h4>What we offer</h4>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>Jobs</h4>
+      <br><br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>Companies & Reviews</h4>
+      <br><br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>Salaries</h4>
+      <br><br>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>Interviews</h4>
+      <br><br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>Popular Searches</h4>
+      <br><br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4>Browse by City</h4>
+      <br><br>
+    </div>
+  </div>
+</div>
+
+<!-- Container (About What's new)-->
+<div class="container-fluid welcome-index text-center ">
+  <h2 class="h2">What's new at PerfectOffer</h2>
+  <div class="row text-center">
+  <div class="whats_new">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://ww4.sinaimg.cn/large/006tNc79gy1fc7uypgxpsj31kw11xqv8.jpg" alt="Are You Paid Fairly"
+             class="img">
+        <h4 class="h4_new"><strong>Are You Paid Fairly? See Your Market Worth in Seconds</strong></h4>
+        <p class="p_new">Receive a custom salary estimate based on your title, company, location, and </p>
+        <button class="btn btn-default btn-lg">Get Your Estimate</button>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fc7v11raf2j31kw11yhdy.jpg" alt="Are You Paid Fairly"
+                  class="img">
+        <h4 class="h4_new"><strong>Do Race & Gender Play a Role in Salary Negotiations? A New Study Says Yes</strong></h4>
+        <p class="p_new">Making the case for a promotion or raise is a nerve-wracking process for any employee, but is  </p>
+        <button class="btn btn-default btn-lg">Read Blog Post</button>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://ww4.sinaimg.cn/large/006tNc79gy1fc7v0tjf95j31kw11ynpi.jpg" alt="Are You Paid Fairly"
+                  class="img">
+        <h4 class="h4_new"><strong>Perfectoffer's Employees' Choice Awards 2017</strong></h4>
+        <p class="p_new">Perfect's annual Employees' Choice Awards honor the Best Places to Work across North  </p>
+        <button class="btn btn-default btn-lg">See the 2017 List</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

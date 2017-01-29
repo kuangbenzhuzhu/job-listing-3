@@ -19,7 +19,152 @@
  @import "bootstrap";
  @import "font-awesome";
 
+//-- navbar --
+.navbar-default{
+  margin-bottom: 0;
+  background-color: #3a5b7e;
+  border: 0;
+  font-size: 12px;
+  line-height: 1.42857143;
+  border-radius: 0;
+}
+
 .navbar-left{
   margin: 7px 0px 0px 0px;
   width: 350px;
+}
+
+//-- navbar Logo字体颜色和对齐样式 --
+.navbar-default .navbar-brand{
+  color: #ffffff;
+  padding: 10px 15px;
+  line-height: 30px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus{
+  color:  #96b2cf;
+  background-color: transparent;
+}
+
+//-- navber 链接颜色 --
+.navbar-default .navbar-nav > li > a{
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus{
+  color:  #96b2cf;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #96b2cf;
+  background-color: #3a5b7e;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: #3a5b7e;
+    color: #212121;
+}
+
+
+//--首页的设计--
+.container-fluid .jumbotron{
+  background-color: #3a5b7e; //--主题蓝色--
+  color: #ffffff; //--字体白色--
+  padding: 100px 25px ;
+  height: 400px;
+  border-radius: 0;
+  margin: 0 -15px 20px;
+}
+
+.container-fluid .welcome-index{
+  padding: 80px 60px;
+  margin: -15px;
+}
+
+.browse{
+  color: #ffffff;
+}
+
+.browse:hover{
+  color:  #96b2cf;
+  background-color: transparent;
+}
+
+.bg-grey{
+  background-color: #f6f6f6;
+  padding: 0;
+  margin: 0;
+}
+
+.logo{
+  color: #3a5b7e;
+  font-size: 200px;
+}
+
+.logo-small{
+  color: #3a5b7e;
+  font-size: 50px;
+}
+
+.thumbnail{
+  padding: 0 0 15px 0;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  height: 530px;
+  box-shadow: 3px 3px 2px #ccc;
+  border-radius: 0;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+
+}
+
+.h2{
+  margin: 0 0 10px 0;
+}
+
+.h4_new{
+  height: 50px;
+  margin: 30px 40px 0;
+  text-align: left;
+}
+
+.p_new {
+    overflow: hidden;
+    text-align: left;
+    margin: 10px 40px 30px ;
+}
+
+.input-group-btn .btn-default{
+  color: white;
+  background-color: #3a5b7e;
+}
+
+.container-fluid .btn-default{
+  color: white;
+  background-color: #3a5b7e;
+}
+
+@media screen and (max-width: 768px){
+
+  .col-sm-4{
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+
+
+//-- search.html.erb --
+.search-result{
+  margin-top: 120px;
 }
